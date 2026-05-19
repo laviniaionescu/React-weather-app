@@ -1,0 +1,30 @@
+.home-city-btn {
+  border-radius: 40px;           
+  border: none;                  
+  background-color: white;
+  padding: 10px 20px;           
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;   
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}
+
+.home-div {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+body.dark .select-text {
+  color: white;
+}
