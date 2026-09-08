@@ -86,7 +86,6 @@ bash
 git clone https://github.com/laviniaionescu/weather-app.git
 
 - Navigate to the project folder
-cd weather-app
 
 - Install dependencies
 npm install
