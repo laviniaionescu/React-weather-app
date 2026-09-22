@@ -26,22 +26,39 @@ A responsive weather application built with React and TypeScript that displays c
 src/
 
 ├── components/
+
 │   ├── CurrentWeather.tsx
+
 │   ├── ForecastItem.tsx
+
 │   ├── ForecastList.tsx
+
 │   └── Header.tsx
+
 ├── contexts/
+
 │   └── WeatherContext.tsx
+
 ├── pages/
+
 │   ├── Home.tsx
+
 │   ├── City.tsx
+
 │   └── Page404.tsx
+
 ├── utils/
+
 │   ├── formatDate.ts
+
 │   ├── formatDay.ts
+
 │   ├── formatTime.ts
+
 │   └── getWeatherIcon.ts
+
 ├── App.tsx
+
 └── index.tsx
 
 
