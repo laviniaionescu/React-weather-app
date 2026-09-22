@@ -1,6 +1,6 @@
 # Weather App
 
-A responsive weather application built with React that displays current weather and a 5-day forecast for multiple cities. The app features a dark/light theme toggle, dynamic city selection via URL routing, and persistent theme state.
+A responsive weather application built with React and TypeScript that displays current weather and a 5-day forecast for multiple cities. The app features a dark/light theme toggle, dynamic city selection via URL routing, and persistent theme state.
 
 ## Features
 
@@ -16,6 +16,7 @@ A responsive weather application built with React that displays current weather 
 
 - **React** – UI library
 - **React Router** – Client-side routing
+- **TypeScript** – Type-safe development
 - **Context API** – Global state management for weather data and theme
 - **OpenWeatherMap API** – Real-time weather and forecast data
 - **CSS3** – Custom styling with dark/light theme support
@@ -25,50 +26,23 @@ A responsive weather application built with React that displays current weather 
 src/
 
 ├── components/
-
-│ ├── CurrentWeather.jsx
-
-│ ├── ForecastItem.jsx
-
-│ ├── ForecastList.jsx
-
-│ └── Header.jsx
-
+│   ├── CurrentWeather.tsx
+│   ├── ForecastItem.tsx
+│   ├── ForecastList.tsx
+│   └── Header.tsx
 ├── contexts/
-
-│ └── WeatherContext.jsx
-
+│   └── WeatherContext.tsx
 ├── pages/
-
-│ ├── Home.jsx
-
-│ ├── City.jsx
-
-│ └── Page404.jsx
-
+│   ├── Home.tsx
+│   ├── City.tsx
+│   └── Page404.tsx
 ├── utils/
-
-│ ├── formatDate.js
-
-│ ├── formatDay.js
-
-│ ├── formatTime.js
-
-│ └── getWeatherIcon.js
-
-├── style/
-
-│ ├── header.css
-
-│ ├── currentweather.css
-
-│ ├── home.css
-
-│ └── main.css
-
-├── App.js
-
-└── index.js
+│   ├── formatDate.ts
+│   ├── formatDay.ts
+│   ├── formatTime.ts
+│   └── getWeatherIcon.ts
+├── App.tsx
+└── index.tsx
 
 
 ## How It Works
