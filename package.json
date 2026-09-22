@@ -17,6 +17,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@types/react-dom": "^19.3.0",
     "react-scripts": "latest"
   },
   "browserslist": {

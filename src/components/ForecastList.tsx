@@ -1,13 +1,21 @@
-import React from 'react';
-import ForecastItem from './ForecastItem';
+import ForecastItem, { ForecastItemType } from './ForecastItem';
+
+interface ForecastListProps {
+  forecast: {
+    list: ForecastItemType[];
+  };
+}
 
 // forecastlist receives the forecast json data from city.jsx
-function ForecastList(props) {
-  const { forecast } = props;
+function ForecastList({forecast}: ForecastListProps) {
+  
+  if (!forecast?.list) {
+    return null;
+  }
 
   // forecast.list has 40 items, 1 every 3 hours. we want one item per day, so we take every 8th item only
   // each item has: dt (timestamp), main.temp, weather[0].icon, etc
-  const dailyForecasts = forecast.list.filter((item, index) => index % 8 === 0)
+  const dailyForecasts = forecast.list.filter((_, index) => index % 8 === 0)
   .slice(1);
 
   return (

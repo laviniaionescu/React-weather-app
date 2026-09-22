@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { WeatherContext } from '../contexts/WeatherContext';
 import CurrentWeather from '../components/CurrentWeather';
 import ForecastList from '../components/ForecastList';
@@ -9,11 +9,13 @@ function City() {
   // extracts the city name from the URL
   const { cityName } = useParams();
   // we receive the data from the provider, because this page is one of the elements that receives the data in app.js
-  const { weather, forecast, setCityName } = useContext(WeatherContext);
+  const { weather, forecast, setCityName } = useContext(WeatherContext)!;
 
   // setCityName runs and changes cityName every time the city's name changes
   useEffect(() => {
+  if (cityName) {
     setCityName(cityName);
+  }
   }, [cityName, setCityName]);
 
   return (

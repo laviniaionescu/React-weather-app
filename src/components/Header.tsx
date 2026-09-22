@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../style/header.css';
 import { useContext } from 'react';
@@ -7,7 +6,7 @@ import { WeatherContext } from '../contexts/WeatherContext';
 function Header() {
   
   // access theme state and setter from global WeatherContext
-  const {theme, setTheme} = useContext(WeatherContext);
+  const { theme, setTheme } = useContext(WeatherContext)!;
 
   // dynamically choose banner image based on the current theme
   const bannerImage = theme === 'light' 
