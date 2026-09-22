@@ -17,6 +17,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@types/node": "^26.6.2",
     "@types/react-dom": "^19.3.0",
     "react-scripts": "latest"
   },

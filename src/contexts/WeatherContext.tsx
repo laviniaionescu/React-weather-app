@@ -51,6 +51,8 @@ interface WeatherContextType {
   setTheme: React.Dispatch<React.SetStateAction<string>>;
 }
 
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
 // create the context
 export const WeatherContext = createContext<WeatherContextType | null>(null);
 
@@ -70,7 +72,7 @@ export function WeatherProvider({ children }: WeatherProviderProps) {
 
   // retrieves the weather data and places it in weather and forecast, re-rendering on every cityName change
   useEffect(() => {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=7961547425743ea0caa40964b6c5fe7c`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.cod === 200) {
@@ -82,7 +84,7 @@ export function WeatherProvider({ children }: WeatherProviderProps) {
 }, [cityName]);
 
 useEffect(() => {
-  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=7961547425743ea0caa40964b6c5fe7c`)
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${API_KEY}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.cod === "200") {
